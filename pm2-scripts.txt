@@ -1,0 +1,8 @@
+  "scripts": {
+    "start": "pm2 start server.js --name my-server",
+    "stop": "pm2 stop my-server",
+    "restart": "pm2 restart my-server",
+    "delete": "pm2 delete my-server",
+    "list": "pm2 list",
+    "monit": "pm2 monit"
+  },

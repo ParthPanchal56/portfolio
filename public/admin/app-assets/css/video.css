@@ -1,0 +1,56 @@
+html body.bg-full-screen-video {
+  background: none;
+}
+
+video {
+  border: none;
+  outline: none;
+}
+
+/* Base styles for video */
+.bg-full-screen-video video {
+  display: block; /* Show video */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Hide video and show a fallback image on tablet devices and smaller */
+@media (max-width: 768px) {
+  .bg-full-screen-video video {
+    display: none; /* Hide video */
+  }
+
+  .bg-full-screen-video img {
+    display: block; /* Show image */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+  }
+}
+
+/* You can use the same rules for mobile or adjust as needed */
+@media (max-width: 480px) {
+  .bg-full-screen-video video {
+    display: none; /* Hide video */
+  }
+
+  .bg-full-screen-video img {
+    display: block; /* Show image */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+  }
+}
