@@ -12,3 +12,16 @@ exports.getLoginPage = async (req, res, next) => {
     next(error);
   }
 };
+
+exports.postLogin = async (req, res, next) => {
+  try {
+    // Simulating asynchronous operation, if there's anything to fetch asynchronously
+    await Promise.resolve(); // This is just a placeholder
+    req.session.isLoggedIn = true;
+    res.redirect("/admin/blog");
+  } catch (error) {
+    // Forward to error handling middleware
+    next(error);
+  }
+};
+

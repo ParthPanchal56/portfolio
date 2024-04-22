@@ -34,7 +34,7 @@ const adminRoutes = require("./routes/admin.routes");
 const portfolioRoutes = require("./routes/portfolio.routes");
 const sessionChecker = require("./middleware/auth");
 
-app.use("/admin", adminRoutes);
+app.use("/admin", adminRoutes, sessionChecker);
 app.use("/", portfolioRoutes);
 
 app.use("*", async (req, res, next) => {
